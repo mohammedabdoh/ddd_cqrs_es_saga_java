@@ -77,15 +77,18 @@ public class Order extends AggregateRoot<OrderId> {
         if (orderStatus != OrderStatus.PAID) {
             throw new OrderDomainException("Order should be paid first to initialize a cancellation order");
         }
+        
         orderStatus = OrderStatus.CANCELLING;
         updateFailureMessages(failureMessages);
     }
 
-    public void cancel() {
+    public void cancel(List<String> failureMessages) {
         if (orderStatus != OrderStatus.CANCELLING || orderStatus != OrderStatus.PENDING) {
             throw new OrderDomainException("Order status it not correct for the order to be cancelled");
         }
+        
         orderStatus = OrderStatus.CANCELLED;
+        updateFailureMessages(failureMessages);
     }
 
     private void initializeOrderItems() {
