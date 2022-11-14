@@ -1,4 +1,4 @@
-package com.food.ordering.system.order.service.domain.dto.message;
+package com.food.ordering.system.order.service.domain.message;
 
 import java.math.BigDecimal;
 import java.time.Instant;

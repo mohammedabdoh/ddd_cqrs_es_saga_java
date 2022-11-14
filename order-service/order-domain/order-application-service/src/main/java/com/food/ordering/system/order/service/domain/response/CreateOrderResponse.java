@@ -1,4 +1,4 @@
-package com.food.ordering.system.order.service.domain.dto.create;
+package com.food.ordering.system.order.service.domain.response;
 
 import java.util.UUID;
 
