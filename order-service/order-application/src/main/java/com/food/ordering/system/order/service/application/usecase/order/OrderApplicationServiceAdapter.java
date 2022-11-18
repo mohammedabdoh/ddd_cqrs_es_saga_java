@@ -11,9 +11,6 @@ import com.food.ordering.system.order.service.domain.query.order.TrackOrderQuery
 import com.food.ordering.system.order.service.domain.query.order.TrackOrderResponse;
 import com.food.ordering.system.order.service.domain.response.CreateOrderResponse;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Service
 @Validated
 class OrderApplicationServiceAdapter implements OrderApplicationServicePort {
