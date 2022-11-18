@@ -5,9 +5,11 @@ import com.food.ordering.system.domain.valueobject.Money;
 import com.food.ordering.system.domain.valueobject.OrderId;
 import com.food.ordering.system.order.service.domain.valueobject.OrderItemId;
 
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
+@Builder
 public class OrderItem extends BaseEntity<OrderItemId> {
     
     private OrderId orderId;
