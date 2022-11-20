@@ -37,6 +37,6 @@ public class TrackOrderHandler {
             throw new OrderNotFoundException("Couldn't find order with tracking ");
         }
 
-        return orderDataMapper.orderToOrderResponse(order.get());
+        return orderDataMapper.orderToTrackOrderResponse(order.get());
     }
 }

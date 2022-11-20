@@ -60,7 +60,9 @@ public class CreateOrderHandler {
         Order createdOrder = saveOrder(order);
         messagePublisher.publish(event);
 
-        return orderDataMapper.orderToCreateOrderResponse(createdOrder);
+        log.info("Order was created with id: {}", createdOrder.getId().getValue());
+
+        return orderDataMapper.orderToCreateOrderResponse(createdOrder, "Order created successfully");
     }
 
     private void checkCustomer(UUID customerId) {
