@@ -28,10 +28,11 @@ public class OrderDataMapper {
             return new Product(productId);
         }).collect(Collectors.toList());
 
-        return new Restaurant(
-                restaurantId,
-                products,
-                true);
+        return Restaurant.builder()
+            .restaurantId(restaurantId)
+            .products(products)
+            .active(true)
+            .build();
     }
 
     public Order createOrderFromCreateOrderCommand(CreateOrderCommand command) {

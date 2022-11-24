@@ -1,4 +1,4 @@
-package com.food.ordering.system.order.service.application.usecase.order;
+package com.food.ordering.system.order.service.domain;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -57,12 +57,12 @@ public class CreateOrderHandler {
         Order order = orderDataMapper.createOrderFromCreateOrderCommand(command);
         OrderCreatedEvent event = orderDomainService.validateAndInitiateOrder(restaurant, order);
 
-        Order createdOrder = saveOrder(order);
+        saveOrder(order);
         messagePublisher.publish(event);
 
-        log.info("Order was created with id: {}", createdOrder.getId().getValue());
+        log.info("Order was created with id: {}", order.getId().getValue());
 
-        return orderDataMapper.orderToCreateOrderResponse(createdOrder, "Order created successfully");
+        return orderDataMapper.orderToCreateOrderResponse(order, "Order created successfully");
     }
 
     private void checkCustomer(UUID customerId) {

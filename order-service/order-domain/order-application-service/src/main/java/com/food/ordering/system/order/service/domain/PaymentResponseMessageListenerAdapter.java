@@ -1,4 +1,4 @@
-package com.food.ordering.system.order.service.application.usecase.order;
+package com.food.ordering.system.order.service.domain;
 
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
