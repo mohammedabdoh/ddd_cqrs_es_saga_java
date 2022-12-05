@@ -320,8 +320,7 @@ public class RestaurantApprovalResponseAvroModel extends org.apache.avro.specifi
    * RecordBuilder for RestaurantApprovalResponseAvroModel instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<RestaurantApprovalResponseAvroModel>
-    implements org.apache.avro.data.RecordBuilder<RestaurantApprovalResponseAvroModel> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<RestaurantApprovalResponseAvroModel> {
 
     private java.lang.String id;
     private java.lang.String sagaId;

@@ -11,7 +11,7 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class PaymentResponseAvroModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class PaymentResponseAvroModel extends org.apache.avro.specific.SpecificRecordBase {
   private static final long serialVersionUID = -2126784712017759782L;
 
 
@@ -367,8 +367,7 @@ public class PaymentResponseAvroModel extends org.apache.avro.specific.SpecificR
    * RecordBuilder for PaymentResponseAvroModel instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<PaymentResponseAvroModel>
-    implements org.apache.avro.data.RecordBuilder<PaymentResponseAvroModel> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<PaymentResponseAvroModel> {
 
     private java.lang.String id;
     private java.lang.String sagaId;

@@ -109,7 +109,6 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase {
 
   // Used by DatumReader.  Applications should not call.
   @Override
-  @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = value$ != null ? value$.toString() : null; break;
@@ -190,8 +189,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase {
    * RecordBuilder for Product instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Product>
-    implements org.apache.avro.data.RecordBuilder<Product> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Product> {
 
     private java.lang.String id;
     private int quantity;
@@ -313,7 +311,6 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public Product build() {
       try {
         Product record = new Product();

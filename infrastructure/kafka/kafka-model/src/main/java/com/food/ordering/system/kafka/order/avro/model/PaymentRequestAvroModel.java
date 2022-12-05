@@ -11,7 +11,7 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class PaymentRequestAvroModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class PaymentRequestAvroModel extends org.apache.avro.specific.SpecificRecordBase {
   private static final long serialVersionUID = 1425163749928760031L;
 
 
@@ -150,7 +150,6 @@ public class PaymentRequestAvroModel extends org.apache.avro.specific.SpecificRe
 
   // Used by DatumReader.  Applications should not call.
   @Override
-  @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = value$ != null ? value$.toString() : null; break;
@@ -321,8 +320,7 @@ public class PaymentRequestAvroModel extends org.apache.avro.specific.SpecificRe
    * RecordBuilder for PaymentRequestAvroModel instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<PaymentRequestAvroModel>
-    implements org.apache.avro.data.RecordBuilder<PaymentRequestAvroModel> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<PaymentRequestAvroModel> {
 
     private java.lang.String id;
     private java.lang.String sagaId;
@@ -689,7 +687,6 @@ public class PaymentRequestAvroModel extends org.apache.avro.specific.SpecificRe
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public PaymentRequestAvroModel build() {
       try {
         PaymentRequestAvroModel record = new PaymentRequestAvroModel();

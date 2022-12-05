@@ -1,4 +1,5 @@
 {
     "xml.format.preservedNewlines": 0,
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
